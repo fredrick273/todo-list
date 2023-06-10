@@ -22,6 +22,7 @@ function submit(){
     newElement.appendChild(text);
     const deleteButton = document.createElement("button");
     const completedButton = document.createElement("button");
+    completedButton.id = `completed${count}`;
     deleteButton.innerHTML = "Delete";
     deleteButton.setAttribute("onclick",`deleteElement(${count})`)
     completedButton.innerHTML = "Completed Task"
@@ -30,9 +31,7 @@ function submit(){
     newElement.appendChild(completedButton);
     listContainer.appendChild(newElement);
     input.value = "";
-    
 
-    console.log(document.cookie);
     }
 }
 
@@ -45,14 +44,15 @@ function deleteElement(id){
     const del = document.getElementById(`list${id}`);
     del.remove();
 
-    console.log(document.cookie);
 
 }
 
 function completed(id){
     const text = document.getElementById(`value${id}`);
+    const completedButton = document.getElementById(`completed${id}`);
     text.style.textDecoration = "line-through";
     (getCookie("Completed"))?setCookie("Completed",(getCookie("Completed")+"+"+text.innerHTML)):setCookie("Completed",(text.innerHTML));
+    completedButton.remove();
 
 }
 
@@ -101,11 +101,15 @@ function setup(){
         deleteButton.setAttribute("onclick",`deleteElement(${i})`)
         completedButton.innerHTML = "Completed Task"
         completedButton.setAttribute("onclick",`completed(${i})`)
+        completedButton.id = `completed${count}`;
         newElement.appendChild(deleteButton);
         newElement.appendChild(completedButton);
         listContainer.appendChild(newElement);
         if (getCookie("Completed"))
-        if (getCookie("Completed").split("+").includes(element)) text.style.textDecoration = "line-through";
+        if (getCookie("Completed").split("+").includes(element)) {
+            text.style.textDecoration = "line-through";
+            completedButton.remove();
+        }
 
     })}}
 
