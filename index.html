@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        #listcontainer {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        
+        p {
+            flex-grow: 1;
+            margin: 0;
+            color: #333;
+        }
+        
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            margin-left: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #555;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 70%;
+        }
+        
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <ul id="listcontainer"></ul>
+
+    <input type="text" id="input">
+    <button onclick="submit()" type="submit">Submit</button>
+    <script src="app.js"></script>
+</body>
+</html>
