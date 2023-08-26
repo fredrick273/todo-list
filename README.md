@@ -11,7 +11,7 @@ A simple web-based ToDo List application that allows you to manage your tasks an
 
 ## Demo
 
-You can view a live demo of the ToDo List application [here](https://fredrick273.github.io/TodoList/). 
+You can view a live demo of the ToDo List application [here](https://fredrick273.github.io/todo-list/). 
 <!-- 
 ## Screenshots
 
