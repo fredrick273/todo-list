@@ -1,13 +1,13 @@
 # ToDoList
 
-A simple web-based ToDo List application that allows you to manage your tasks and keep track of completed tasks.
+A simple web-based ToDo List application that allows you to manage your tasks and keep track of pending tasks.
 
 ## Features
 
 - Add new tasks to the list.
-- Mark tasks as completed.
+- Edit already added tasks.
 - Delete tasks from the list.
-- Tasks are stored using cookies, allowing data persistence.
+- Tasks are stored using Localstorage, allowing data persistence.
 
 ## Demo
 
