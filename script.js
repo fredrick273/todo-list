@@ -39,10 +39,9 @@ function rendertasks(){
     listui.innerHTML = "";
     let tasks = JSON.parse(localStorage.getItem("tasks"))
     if (tasks != null){
-        console.log(tasks);
         for (var i =0;i<tasks.length;i++){
             var task = tasks[i];
-            console.log(task);
+            
             var itemhtml = `
             <tr class="todo-item">
                     <td>${task.task}</td>
@@ -129,5 +128,4 @@ function deleteall(){
     localStorage.setItem("tasks",null);
     rendertasks();
 }
-
-document.onload(rendertasks())
+window.addEventListener("load",rendertasks)
